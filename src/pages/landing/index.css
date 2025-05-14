@@ -1,0 +1,47 @@
+.collapse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnBlack{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px;
+}.txtLogin{
+    color: black;
+    margin: 3px;
+}.navbar{
+    background-color: white;
+    border-bottom: 2px;
+    border-color: black;
+}.h1{
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+}
+.btnBlueWhite{
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px;
+}
+.btnWhiteBlue{
+    background-color: #d5e9ff;
+    color: #007bff;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px;
+}.imageCol7{
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}.logo{
+    height: 30px;
+    width: auto;
+}.trustTeamLogo{
+    height:10px;
+    width: auto;
+}
