@@ -44,4 +44,11 @@
 }.trustTeamLogo{
     height:10px;
     width: auto;
+}.redCard{
+    background-color: #f649324f;
+}.blueCard{
+    background-color: #0980e86a;
+}.yellowCard{
+    background-color: #f6e6494f;
+    margin-top: 20px;
 }
