@@ -76,10 +76,10 @@ let Body = () => {
                 <div className="col-4">
                 trusted by top teams
                 </div>
-                <div className="trustTeamLogo col-1 ">
+                <div className="col-1 " style= {{height: 10, width: "auto"}} >
                     <img src="https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2FjWkCPMAAj0Av69704DQoB%2F84499b606028b276e0bf94c238f07097%2FOpenAI-black-wordmark-cropped.png&w=3840&q=75" alt="OpenAI Logo" className="imageCol4" />
                 </div>
-                <div className="trustTeamLogo col-1">
+                {/* <div className="trustTeamLogo col-1">
                     <img src="https://images.ctfassets.net/spoqsaf9291f/502ApiNcRHgIwrDU8XRYTQ/497492503acb3fa21bbd9dd1aec193c3/Figma-logo-color.svg" alt="Figma Logo" className="imageCol4" />
                 </div>
                 <div className="trustTeamLogo col-1">
@@ -99,7 +99,7 @@ let Body = () => {
                 </div>
                 <div className="trustTeamLogo col-1">
                     <img src="https://images.ctfassets.net/spoqsaf9291f/15en0a60cYTRxNO1QlHbdg/f09657a6b8287f1db0e628a048267e2c/vercel-logotype-light.svg" alt="Vercel Logo" className="imageCol4" />
-                </div>
+                </div> */}
             </div>
 
             <div className="row">
