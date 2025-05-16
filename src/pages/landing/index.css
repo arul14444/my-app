@@ -49,6 +49,7 @@
     background-color: #f649324f;
 }.blueCard{
     background-color: #57b0ff6a;
+    height: 100%;
 }.yellowCard{
     background-color: #f6e6494f;
     margin-top: 20px;
@@ -67,6 +68,14 @@
 }.p46{
     font-size: 46px;
     margin-top: 20px;
+}.p46B{
+    font-size: 46px;
+    font-weight: bold;
+
+}.p56B{
+    font-size: 56px;
+    font-weight: bold;
+
 }.p66B{
     font-size: 66px;
     font-weight: bold;
@@ -81,4 +90,16 @@
     background-color: #ceffff;
     margin-top: 20px;
     margin-bottom: 20px
-}
+}.logo {
+    max-height: 24px;
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-box {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+  .play-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
