@@ -1,79 +1,24 @@
 import React from "react";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-
+import HeroBanner from "../../component/landing/HeroBanner";
+import FiturSection1 from "../../component/landing/FiturSection1";
+import FiturSection2 from "../../component/landing/FiturSection2";
+import FiturSection3 from "../../component/landing/FiturSection3";
+import Utility from "../../component/landing/Utility";
+import UsedbyCompenies from "../../component/landing/UsedbyCompenies";
+import IntegrateApps from "../../component/landing/IntegrateApps";
+import OtherApps from "../../component/landing/OtherApps";
+import Footer from "../../component/landing/Footer";
 let Landing = () => {
   return Body();
-};
-
-let Header = () => {
-  return (
-    <div className="container-fluid">
-      <div className="container-fluid">
-        <nav className="navbar">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
-            alt="Notion"
-            className="logo"
-          />
-
-          <ul className="navbar-nav flex-row">
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Notion
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Mail
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Calendar
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                AI
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Enterprise
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Explore
-              </a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Request a demo
-              </a>
-            </li>
-          </ul>
-
-          <div className="d-flex align-items-center">
-            <a className="txtLogin">Login</a>
-            <button className="btnBlack">Get Notion free</button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
 };
 
 let Body = () => {
   return (
     <div className="container">
-      <section>
+        <HeroBanner></HeroBanner>
+      {/* <section>
         <nav className="navbar">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
@@ -150,9 +95,9 @@ let Body = () => {
             />
           </div>
         </div>
-      </section>
-
-    <section>
+      </section> */}
+        <FiturSection1></FiturSection1>
+    {/* <section>
     <div className="row mb-3">
         <div className="col-4">trusted by top teams</div>
         <div className="col-8 d-flex justify-content-start align-items-center">
@@ -224,9 +169,9 @@ let Body = () => {
           </div>
         </div>
       </div>
-    </section>
-
-     <section>
+    </section> */}
+    <FiturSection2></FiturSection2>
+     {/* <section>
      <div className="row">
         <div className="col-sm-12">
           <div className="yellowCard card">
@@ -241,9 +186,9 @@ let Body = () => {
           </div>
         </div>
       </div>
-     </section>
-     
-      <section>
+     </section> */}
+     <FiturSection3></FiturSection3>
+      {/* <section>
       <div className="row">
         <div className="col-sm-6">
           <div className="grayCard card">
@@ -270,8 +215,9 @@ let Body = () => {
           </div>
         </div>
         </div>
-      </section>
-      <section>
+      </section> */}
+    <Utility></Utility>
+      {/* <section>
       <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-sm-12">
@@ -342,9 +288,10 @@ let Body = () => {
             </div>
           </div>
           </div>
-      </section>
-        
-          <div className="container my-5">
+      </section> */}
+    <UsedbyCompenies></UsedbyCompenies>
+        {/* <section>
+        <div className="container my-5">
             <div className="grayCard p-4">
               <div className="row align-items-start text-start ps-md-4">
                 <div className="col-md-8">
@@ -431,9 +378,10 @@ let Body = () => {
                 </div>
               </div>
             </div>
-    
-
-
+            </div>
+        </section> */}
+        <IntegrateApps></IntegrateApps>
+        {/* <section>
         <div className="integrateApps row">
           <div className="col-sm-5 h-100">
             <p className="p46B">Find anything </p>
@@ -585,8 +533,10 @@ let Body = () => {
             </div>
           </div>
         </div>
-          </div>
-      <div className="row">
+        </section> */}
+        <OtherApps></OtherApps>
+        {/* <section>
+        <div className="row">
         <div className="col-sm-6">
           <div className="grayCard card">
             <div className="card-body">
@@ -682,6 +632,11 @@ let Body = () => {
           </div>
         </div>
       </div>
+        </section> */}
+        <Footer>
+            
+        </Footer>
+      {/* <section>
       <div class="bg-white py-5 border-top">
         <div class="container">
           <div class="row">
@@ -828,6 +783,7 @@ let Body = () => {
           </div>
         </div>
       </div>
+      </section> */}
     </div>
   );
 };
