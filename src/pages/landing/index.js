@@ -2,9 +2,8 @@ import React from "react";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import HeroBanner from "../../component/landing/HeroBanner";
-import FiturSection1 from "../../component/landing/FiturSection1";
-import FiturSection2 from "../../component/landing/FiturSection2";
-import FiturSection3 from "../../component/landing/FiturSection3";
+import Trusted from "../../component/landing/Trusted";
+import FiturSection from "../../component/landing/FiturSection";
 import Utility from "../../component/landing/Utility";
 import UsedbyCompenies from "../../component/landing/UsedbyCompenies";
 import IntegrateApps from "../../component/landing/IntegrateApps";
@@ -96,7 +95,8 @@ let Body = () => {
           </div>
         </div>
       </section> */}
-        <FiturSection1></FiturSection1>
+        <Trusted></Trusted>
+        <FiturSection></FiturSection>
     {/* <section>
     <div className="row mb-3">
         <div className="col-4">trusted by top teams</div>
@@ -170,7 +170,6 @@ let Body = () => {
         </div>
       </div>
     </section> */}
-    <FiturSection2></FiturSection2>
      {/* <section>
      <div className="row">
         <div className="col-sm-12">
@@ -187,7 +186,6 @@ let Body = () => {
         </div>
       </div>
      </section> */}
-     <FiturSection3></FiturSection3>
       {/* <section>
       <div className="row">
         <div className="col-sm-6">
@@ -634,7 +632,7 @@ let Body = () => {
       </div>
         </section> */}
         <Footer>
-            
+
         </Footer>
       {/* <section>
       <div class="bg-white py-5 border-top">

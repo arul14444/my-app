@@ -1,14 +1,20 @@
 import React from "react";
+import {banner} from "../../services/landing";
+
 let HeroBanner = () => {
   return (
     <section>
       <nav className="navbar">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+        {banner?.map(x=>{
+          return (
+            <img
+          src={x.source}
           alt="Notion"
+          key={x.id}
           className="logo"
         />
-
+          )
+        })}
         <ul className="navbar-nav flex-row">
           <li className="nav-item mx-2">
             <a className="nav-link" href="#">
