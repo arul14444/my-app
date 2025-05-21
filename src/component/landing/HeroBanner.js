@@ -1,19 +1,48 @@
 import React from "react";
-import {banner} from "../../services/landing";
+import { banner } from "../../services/landing";
+
+import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { fetchBanner } from "../../services/landing";
+
+// bisa masukin data, is error dan is loading
+// queryKey digunakan untuk fetch data yang menggunakan parameterexport const fetchProduct = async (slug, unique) => {
+//   const { data } = await axios.get(
+//     `${API_URL}/product-detail/${slug}/${unique}`
+//   );
+//   return data;
+// };
+
+// const { data: product } = useQuery({
+//   queryKey: ["product", slug, uniqueCode],
+//   queryFn: () => fetchProduct(slug, uniqueCode), => memanggil method yang ada diservice
+//   staleTime: 21600000, => memastikan data fresh dalam kurun waktu tersebut dengan kata lain akan mengambil data dalam waktu tersebut secara otomatis
+//   cacheTime: 21600000 => digunakan untuk mengambil data baru dalam kurun waktu yang telah ditentukan ketika cache
+// });
 
 let HeroBanner = () => {
+  const {
+    data: banner,
+    error,
+    isloading,
+  } = useQuery({
+    queryKey: ["banner"],
+    queryFn: fetchBanner,
+    // cacheTime: 20000000
+  });
+  console.log(banner);
+  // useEffect(() => {
+  //   console.log(banner);
+  // }, [banner]);
+  if (isloading) return <h1>Loading</h1>;
+  if (error) return <h1> Server not respon</h1>;
   return (
     <section>
       <nav className="navbar">
-        {banner?.map(x=>{
+        {banner?.map((x) => {
           return (
-            <img
-          src={x.source}
-          alt="Notion"
-          key={x.id}
-          className="logo"
-        />
-          )
+            <img src={x.source} alt="Notion" key={x.id} className="logo" />
+          );
         })}
         <ul className="navbar-nav flex-row">
           <li className="nav-item mx-2">

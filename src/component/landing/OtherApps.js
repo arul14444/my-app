@@ -1,11 +1,26 @@
 import React from "react";
-import { OtherAppsData } from "../../services/landing";
+import { useQuery } from "@tanstack/react-query";
+import { fetchOtherAppsData } from "../../services/landing"; // Perbaiki nama impor
 
 const OtherApps = () => {
+  const {
+    data: otherAppsData, // Data hasil fetch
+    error,
+    isLoading, // Perbaiki typo dari 'isloading' menjadi 'isLoading'
+  } = useQuery({
+    queryKey: "otherApps", // Pastikan key ini unik
+    queryFn: fetchOtherAppsData,
+  });
+
+  console.log(otherAppsData);
+
+  if (isLoading) return <h1>Loading</h1>;
+  if (error) return <h1>Server not respon</h1>;
+
   return (
     <section>
       <div className="row">
-        {OtherAppsData?.map((x, index) => (
+        {otherAppsData?.map((x, index) => ( // Gunakan 'otherAppsData' di sini
           <div className="col-sm-6" key={index}>
             <div className="grayCard card">
               <div className="card-body">

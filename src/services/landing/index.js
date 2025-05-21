@@ -1,3 +1,37 @@
+import axios from "axios";
+import { API_URL } from "../../env";
+
+
+export const fetchBanner = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/banner`);
+  return data;
+}
+
+export const fetchTrustedBy = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/trustedBy`);
+  return data;
+}
+export const fetchFeatures = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/features`);
+  return data;
+}
+export const fetchUsedByCompanies = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/usedByCompanies`);
+  return data;
+}
+export const fetchIntegratedApps = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/integratedApps`);
+  return data;
+}
+export const fetchIntegratedComingSoonApps = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/integratedComingSoonApps`);
+  return data;
+}
+export const fetchOtherAppsData = async () =>{
+  const { data } = await axios.get(`${API_URL}/api/otherAppsData`);
+  return data;
+}
+
 export const banner = [
   {
     id: 1,
@@ -173,27 +207,27 @@ export const integratedApps =[
 
 export const integratedComingSoonApps = [
   {
-    "id": 8,
+    "id": 1,
     "source": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F7uxYhi4B135cc5qjskpew1%2F85dd5b390939ec5d9f481b334dfaa433%2Fgmail-logo.png&w=48&q=75",
     "apps": "Gmail"
   },
   {
-    "id": 9,
+    "id": 2,
     "source": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F6sXzNcTANYabBBQaiCZMXR%2F678d3ad8374d4276da3fd8e95ae88234%2Flinear-logo.png&w=48&q=75",
     "apps": "Linear"
   },
   {
-    "id": 10,
+    "id": 3,
     "source": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F4QFYcbryJVxPpMyp1lypRD%2Fb78f20fcf39037dd5792bae510a9b740%2Fzendesk-logo.png&w=48&q=75",
     "apps": "Zendesk"
   },
   {
-    "id": 11,
+    "id": 4,
     "source": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F6Kt86waxJxRwpIxAPorGyn%2F4ddbf37fecde60a2faf7ff9788ba00ac%2Fsalesforce-logo.png&w=48&q=75",
     "apps": "Salesforce"
   },
   {
-    "id": 12,
+    "id": 5,
     "source": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F6J63Bc8LtN8uIO1giCEyZN%2F4364add25c89df7f0912c64249a22ce4%2Fbox-logo.png&w=48&q=75",
     "apps": "Box"
   }

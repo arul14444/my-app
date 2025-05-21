@@ -2,6 +2,7 @@ import React from "react";
 import { UsedbyCompenies } from "../../services/landing";
 
 const UsedbyCompaniesComponent = () => {
+  
   return (
     <section>
       <div className="container my-5">

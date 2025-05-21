@@ -1,7 +1,23 @@
 import React from "react";
 import { integratedComingSoonApps, integratedApps } from "../../services/landing";
+import { useQuery } from "@tanstack/react-query";
+import { fetchIntegratedApps } from "../../services/landing";
 
 let IntegrateApps = () => {
+  const {
+    data: fetchedIntegratedApps, // Ubah nama variabel di sini
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["integratedApps"], // Tambahkan queryKey untuk caching
+    queryFn: fetchIntegratedApps,
+  });
+
+  console.log(fetchedIntegratedApps);
+
+  if (isLoading) return <h1>Loading</h1>;
+  if (error) return <h1>Server not respon</h1>;
+
   return (
     <section>
       <div className="integrateApps row">
@@ -19,7 +35,7 @@ let IntegrateApps = () => {
             <div className="col-md-6">
               <h5><strong>Integrates with</strong></h5>
               <ul className="list-unstyled">
-                {integratedApps?.map((x, idx) => (
+                {fetchedIntegratedApps?.map((x, idx) => (
                   <li key={idx} className="d-flex align-items-center mb-2">
                     <img
                       src={x.source}
